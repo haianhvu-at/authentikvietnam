@@ -357,6 +357,8 @@ h1, h2, h3 { font-family: var(--font-head); color: var(--ink); }
 .footer__grid h4 { margin: 0 0 6px; font-family: var(--font-head); font-size: 14px; color: var(--ink); }
 .footer__grid a { display: block; color: var(--muted); text-decoration: none; padding: 2px 0; }
 .footer__grid a:hover { color: var(--green-dk); }
+.footer__grid a.footer__inline { display: inline; padding: 0; color: var(--green-dk); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.footer__grid a.footer__inline:hover { color: var(--rust); }
 .footer__bottom { border-top: 1px solid var(--line); padding: 18px 0 28px; font-size: 12.5px; color: var(--muted-2); }
 
 /* ---------- boutons flottants ---------- */
@@ -368,6 +370,13 @@ h1, h2, h3 { font-family: var(--font-head); color: var(--ink); }
 }
 .to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
 .to-top svg { width: 20px; height: 20px; }
+.home-btn {
+  width: 46px; height: 46px; border-radius: 50%; background: #fff; border: 1px solid var(--line-2); color: var(--green-dk);
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(38, 35, 31, .12);
+  transition: background .2s, color .2s;
+}
+.home-btn:hover { background: var(--green-dk); color: #fff; }
+.home-btn svg { width: 21px; height: 21px; }
 .whatsapp {
   width: 58px; height: 58px; border-radius: 50%; background: #1fa855; color: #fff;
   display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(31, 168, 85, .35);
