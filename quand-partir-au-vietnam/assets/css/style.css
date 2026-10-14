@@ -384,6 +384,51 @@ h1, h2, h3 { font-family: var(--font-head); color: var(--ink); }
 .whatsapp:hover { background: #168a45; color: #fff; }
 .whatsapp svg { width: 30px; height: 30px; }
 
+/* ---------- résumé : meilleure période ---------- */
+.section--flush { padding-top: 0; }
+.byline { margin: 18px 0 0; font-size: 13.5px; color: var(--muted-2); }
+.summary__answer { margin: 0 0 28px; max-width: 860px; font-size: 18px; line-height: 1.65; }
+.table-scroll { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+.season-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 15px; }
+.season-table caption { caption-side: bottom; text-align: left; padding: 12px 20px 16px; font-size: 13px; color: var(--muted-2); }
+.season-table th, .season-table td { padding: 16px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.season-table thead th { background: var(--paper-2); font-family: var(--font-head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--rust); }
+.season-table tbody th { font-family: var(--font-head); font-size: 16px; font-weight: 800; }
+.season-table small { display: block; margin-top: 2px; font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--muted); }
+.season-table td.good { color: var(--green-dk); font-weight: 700; }
+.seasons4 { margin-top: 40px; }
+.seasons4__title { margin: 0 0 6px; font-size: 22px; font-weight: 800; }
+.seasons4__intro { margin: 0 0 18px; color: var(--muted); }
+.seasons4__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.seasons4__grid li { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; font-size: 14.5px; color: var(--muted); }
+.seasons4__grid strong { display: block; font-family: var(--font-head); font-size: 17px; color: var(--ink); }
+.seasons4__grid span { display: block; margin: 2px 0 8px; font-size: 13px; font-weight: 700; color: var(--green-dk); }
+
+/* ---------- FAQ ---------- */
+.faq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.faq__item { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; }
+.faq__item h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; font-weight: 800; }
+.faq__a p { margin: 0 0 10px; font-size: 15.5px; }
+.faq__a p:last-child { margin-bottom: 0; }
+@media (max-width: 960px) {
+  .seasons4__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .faq { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .summary__answer { font-size: 16.5px; }
+  .table-scroll { overflow: visible; background: none; border: 0; border-radius: 0; }
+  .season-table { min-width: 0; display: block; }
+  .season-table thead { display: none; }
+  .season-table tbody, .season-table tr { display: block; }
+  .season-table tr { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 6px 16px; margin-bottom: 12px; }
+  .season-table th, .season-table td { display: block; padding: 10px 0; }
+  .season-table td::before { content: attr(data-label); display: block; margin-bottom: 2px; font-family: var(--font-head); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--rust); }
+  .season-table tr > :last-child { border-bottom: 0; }
+  .season-table caption { display: block; padding: 0 0 12px; }
+  .seasons4__grid { grid-template-columns: 1fr; }
+  .faq__item { padding: 20px; }
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 1180px) {
   .months { grid-template-columns: repeat(6, minmax(0, 1fr)); }

@@ -27,7 +27,7 @@ authentikvietnam/                      ← gốc repo
    Trang sẽ ở địa chỉ `https://<tên-tài-khoản>.github.io/authentikvietnam/quand-partir-au-vietnam/` (hoặc tên miền riêng nếu repo đã gắn).
 4. **Chạy thử workflow một lần**: tab *Actions → « Météo – quand partir au Vietnam » → Run workflow*. Sau đó workflow tự chạy **mỗi ngày lúc 5h17 sáng giờ Việt Nam**.
    Nếu bước commit báo lỗi quyền: *Settings → Actions → General → Workflow permissions → Read and write permissions*.
-5. **SEO**: khi đã có địa chỉ chính thức, mở `index.html`, bỏ comment 2 dòng `canonical` và `og:url` ở đầu file và thay `VOTRE-DOMAINE` bằng địa chỉ thật.
+5. **SEO**: địa chỉ trang đang khai báo là `https://haianhvu-at.github.io/authentikvietnam/quand-partir-au-vietnam/`. Nếu đổi sang tên miền khác, tìm và thay địa chỉ này ở `index.html` (canonical, og:url, og:image, JSON-LD) và `sitemap.xml`.
 
 ## Thời tiết 7 ngày — hoạt động thế nào
 
@@ -58,3 +58,12 @@ python3 -m http.server 8000
 # mở http://localhost:8000/quand-partir-au-vietnam/
 ```
 (Mở thẳng file `index.html` bằng trình duyệt sẽ không tải được thời tiết, cần chạy qua server như trên.)
+
+## SEO, AIO & schema (cập nhật 14/10/2026)
+
+- **Từ khóa chính**: quand partir au Vietnam · meilleure période pour (partir au) le Vietnam · quand aller au Vietnam · les 4 saisons au Vietnam · saison des pluies au Vietnam · mois à éviter / quel mois ne pas partir · agence voyage / agence locale / agence francophone Vietnam.
+- **Meta**: title 59 ký tự, description 155 ký tự, canonical, og/twitter đầy đủ, `max-image-preview:large`.
+- **Nội dung trả lời trực tiếp (cho Google AI Overviews, ChatGPT, Perplexity…)**: khối « En bref » ở hero, khối « La réponse courte » (đoạn trả lời + bảng 3 miền + 4 mùa ở miền Bắc), và mục **FAQ** 8 câu hỏi (`#faq`).
+- **Schema JSON-LD** (trong `<head>`): TravelAgency, WebPage + FAQPage (8 câu hỏi, **phải trùng chữ với FAQ hiển thị**), Article, ImageObject, Country (Vietnam). Sửa câu hỏi/trả lời FAQ thì sửa cả 2 chỗ.
+- **Ngày cập nhật**: khi sửa nội dung, đổi ngày ở dòng `Mis à jour le …` (hero), `article:modified_time`, `dateModified` (JSON-LD) và `<lastmod>` trong `sitemap.xml`.
+- **Sau khi đẩy lên**: khai báo trang trong Google Search Console (thuộc tính URL-prefix `https://haianhvu-at.github.io/authentikvietnam/`), gửi `quand-partir-au-vietnam/sitemap.xml`, rồi kiểm tra bằng Rich Results Test và Schema Markup Validator.
