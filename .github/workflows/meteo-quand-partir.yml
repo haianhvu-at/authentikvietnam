@@ -1,0 +1,41 @@
+# Met à jour chaque jour la météo 7 jours de la landing page « Quand partir au Vietnam ».
+# Source : MET Norway (api.met.no), gratuite y compris pour un usage commercial, licence CC BY 4.0.
+name: Météo – quand partir au Vietnam
+
+on:
+  schedule:
+    - cron: "17 22 * * *" # 22:17 UTC = 05:17 heure du Vietnam
+  workflow_dispatch: # bouton « Run workflow » dans l'onglet Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: meteo-quand-partir
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Récupérer les prévisions
+        run: node quand-partir-au-vietnam/scripts/update-meteo.mjs
+
+      - name: Enregistrer meteo.json
+        run: |
+          if git diff --quiet -- quand-partir-au-vietnam/data/meteo.json; then
+            echo "Aucun changement."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898810+github-actions[bot]@users.noreply.github.com"
+          git add quand-partir-au-vietnam/data/meteo.json
+          git commit -m "Météo quand-partir-au-vietnam : mise à jour automatique"
+          git pull --rebase
+          git push
