@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://authentik-vietnam.web.app/sitemap.xml
