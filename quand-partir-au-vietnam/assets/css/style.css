@@ -404,29 +404,54 @@ h1, h2, h3 { font-family: var(--font-head); color: var(--ink); }
 .seasons4__grid strong { display: block; font-family: var(--font-head); font-size: 17px; color: var(--ink); }
 .seasons4__grid span { display: block; margin: 2px 0 8px; font-size: 13px; font-weight: 700; color: var(--green-dk); }
 
-/* ---------- FAQ ---------- */
-.faq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.faq__item { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; }
-.faq__item h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; font-weight: 800; }
+/* ---------- FAQ (accordéon) ---------- */
+.faq { display: flex; flex-direction: column; gap: 12px; max-width: 900px; }
+.faq__item { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; }
+.faq__item[open] { background: var(--card); border-color: var(--line-2); box-shadow: 0 6px 18px rgba(38, 35, 31, .06); }
+.faq__item summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; cursor: pointer; list-style: none; }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary:hover h3 { color: var(--green-dk); }
+.faq__item h3 { margin: 0; font-size: 17.5px; line-height: 1.35; font-weight: 800; }
+.faq__chev { flex: 0 0 32px; width: 32px; height: 32px; padding: 6px; border-radius: 50%; background: var(--green-soft); color: var(--green-dk); transition: transform .25s; }
+.faq__item[open] .faq__chev { transform: rotate(180deg); }
+.faq__a { padding: 0 24px 22px; }
 .faq__a p { margin: 0 0 10px; font-size: 15.5px; }
 .faq__a p:last-child { margin-bottom: 0; }
+
+/* ---------- carrousels (mobile) ---------- */
+.dots { display: none; }
 @media (max-width: 960px) {
   .seasons4__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .faq { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .summary__answer { font-size: 16.5px; }
   .table-scroll { overflow: visible; background: none; border: 0; border-radius: 0; }
   .season-table { min-width: 0; display: block; }
   .season-table thead { display: none; }
-  .season-table tbody, .season-table tr { display: block; }
-  .season-table tr { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 6px 16px; margin-bottom: 12px; }
-  .season-table th, .season-table td { display: block; padding: 10px 0; }
+  .season-table tr { display: block; }
+  .season-table th, .season-table td { display: block; padding: 9px 0; }
   .season-table td::before { content: attr(data-label); display: block; margin-bottom: 2px; font-family: var(--font-head); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--rust); }
   .season-table tr > :last-child { border-bottom: 0; }
   .season-table caption { display: block; padding: 0 0 12px; }
-  .seasons4__grid { grid-template-columns: 1fr; }
-  .faq__item { padding: 20px; }
+
+  /* carrousel générique : cartes à 84 %, la suivante dépasse pour inviter à glisser */
+  [data-carousel] {
+    display: flex !important; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
+    margin: 0 -16px; padding: 2px 16px 8px; scrollbar-width: none;
+  }
+  [data-carousel]::-webkit-scrollbar { display: none; }
+  [data-carousel] > * { flex: 0 0 84%; min-width: 0; scroll-snap-align: start; }
+  .season-table tr { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 6px 16px; }
+  .seasons4__grid li { padding: 16px 18px; }
+  .pack__col { padding: 20px; }
+  .dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+  .dots i { width: 7px; height: 7px; border-radius: 99px; background: var(--line-2); transition: width .2s, background .2s; }
+  .dots i.is-on { width: 20px; background: var(--green-dk); }
+
+  .faq__item summary { padding: 16px 18px; gap: 12px; }
+  .faq__item h3 { font-size: 16px; }
+  .faq__a { padding: 0 18px 18px; }
 }
 
 /* ---------- responsive ---------- */

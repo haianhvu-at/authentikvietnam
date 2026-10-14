@@ -50,6 +50,26 @@
     Object.keys(byId).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
   }
 
+  /* ---------- carrousels mobiles : points de pagination ---------- */
+  $$("[data-carousel]").forEach(function (track) {
+    var items = track.children;
+    if (items.length < 2) return;
+    var dots = document.createElement("div");
+    dots.className = "dots";
+    dots.setAttribute("aria-hidden", "true");
+    for (var i = 0; i < items.length; i++) dots.appendChild(document.createElement("i"));
+    var anchor = track.closest(".table-scroll") || track;
+    anchor.parentNode.insertBefore(dots, anchor.nextSibling);
+    var update = function () {
+      var step = items[1].offsetLeft - items[0].offsetLeft || 1;
+      var idx = Math.round(track.scrollLeft / step);
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 4) idx = items.length - 1;
+      for (var j = 0; j < dots.children.length; j++) dots.children[j].classList.toggle("is-on", j === idx);
+    };
+    track.addEventListener("scroll", update, { passive: true });
+    update();
+  });
+
   /* ---------- retour en haut ---------- */
   var toTop = $(".to-top");
   if (toTop) {
