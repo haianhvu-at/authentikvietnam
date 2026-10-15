@@ -3,7 +3,7 @@
    (navbar, pied de page, boutons flottants)
    Fichier partagé : https://authentik-vietnam.web.app/assets/site/site.css
    Modèles HTML à copier : /_partials/navbar.html et /_partials/footer.html
-   Polices attendues dans la page : Montserrat + Open Sans (Google Fonts)
+   Polices : Raleway + Be Vietnam Pro (Google Fonts) ; tailles et graisses dans typo.css
    ========================================================= */
 :root {
   --av-ink: #26231f;

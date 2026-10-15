@@ -1,0 +1,112 @@
+/* =========================================================
+   Authentik Vietnam · typographie commune à toutes les pages
+   Inspirée d'exoticvoyages.com : titres en Raleway (gras, capitales pour les grands titres),
+   texte en police géométrique légère (300). Poppins n'ayant pas les accents vietnamiens
+   (ạ, ồ, ữ…), le texte utilise Be Vietnam Pro, de la même famille de dessin.
+   À charger EN DERNIER, après la feuille de style de la page :
+     <link rel="stylesheet" href="RACINE/assets/site/typo.css?v=1">
+   Polices Google à charger dans <head> :
+     family=Raleway:wght@500;600;700&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300
+   ========================================================= */
+:root {
+  --ff-title: "Raleway", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ff-text: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-head: var(--ff-title);
+  --font-body: var(--ff-text);
+  --av-ff-title: var(--ff-title);
+  --av-ff-text: var(--ff-text);
+}
+
+/* ---------- texte courant ---------- */
+body { font-family: var(--ff-text); font-size: 18px; line-height: 1.6; font-weight: 300; }
+/* Raleway dessine par défaut des chiffres « elzéviriens » (05, 20 qui descendent) : on force les chiffres alignés */
+body { font-variant-numeric: lining-nums; }
+.clock__time, .day__t, .month__t { font-variant-numeric: lining-nums tabular-nums; }
+strong, b { font-weight: 600; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--ff-title); }
+
+.hero__intro, .hero__lead, .lead, .summary__answer { font-size: 19px; font-weight: 300; line-height: 1.6; }
+.card__text, .dossier__desc, .faq-item__a, .faq__a p, .notes li, .check li, .hcard p, .hcard ul,
+.mosq p, .kit p, .brief p, .tip, .panel-dark p, .dot-list, .seasons4__grid li, .cta p, .cta-box__text p,
+.sim-acc .faq-item__a, .notice p { font-size: 16px; line-height: 1.6; }
+.table-box table, .season-table { font-size: 16px; }
+
+/* ---------- grands titres : Raleway gras en capitales ---------- */
+.hero h1 { font-family: var(--ff-title); font-size: 48px; line-height: 1.15; font-weight: 700; letter-spacing: .01em; text-transform: uppercase; }
+.h2, .cta h2, .cta-box__text h2 { font-family: var(--ff-title); font-size: 40px; line-height: 1.2; font-weight: 700; letter-spacing: .01em; text-transform: uppercase; }
+.av-reviews__title { font-size: 24px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; }
+
+/* ---------- titres de rubrique et de cartes ---------- */
+.rub h3, .live__head h3 { font-size: 26px; font-weight: 700; line-height: 1.3; }
+.chapter__name { font-size: 24px; font-weight: 700; }
+.rub__sub, .seasons4__title, .pack__title { font-size: 22px; font-weight: 700; }
+.card__title, .see-also__t, .tip__title { font-size: 19px; font-weight: 700; }
+.dossier__title, .place__name { font-size: 22px; font-weight: 700; }
+.vplayer__title { font-size: 24px; font-weight: 700; }
+.vitem__title, .post__title { font-size: 16px; font-weight: 700; }
+.panel-dark p.panel-dark__t { font-size: 24px; font-weight: 700; }
+.panel-dark p.panel-dark__k { font-size: 12px; }
+.stat, .fact__v, .big, .money__v, .clock__time, .hcard__big, .best__value, .review__score, .av-review__score b { font-weight: 700; }
+.pack__col h4, .mosq h4, .kit h4, .seasons4__grid strong, .month__name, .tab strong, .season-table tbody th { font-weight: 700; }
+
+/* petites étiquettes en capitales */
+.eyebrow, .brief__label, .notes__title, .best__label, .cta__kicker, .panel-dark__k, .subnav__label, .vplayer__side-h, .essentiel__box h2 {
+  font-family: var(--ff-title); font-weight: 700;
+}
+
+/* ---------- FAQ et listes dépliantes ---------- */
+.faq-item summary { font-family: var(--ff-title); font-size: 17px; font-weight: 700; }
+.faq__item h3 { font-family: var(--ff-title); font-size: 18px; font-weight: 700; }
+
+/* ---------- boutons : Raleway gras en capitales ---------- */
+.btn, .av-btn { font-family: var(--ff-title); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
+.btn--small, .btn--ghost-green { font-size: 13.5px; }
+.btn--yellow, .btn--gold { font-size: 16px; }
+
+/* ---------- navigation ---------- */
+.av-menu { font-family: var(--ff-text); font-size: 16px; font-weight: 400; }
+.av-menu a[aria-current="page"] { font-weight: 500; }
+.av-mobile a { font-family: var(--ff-text); font-size: 17px; font-weight: 400; }
+.subnav__links { font-family: var(--ff-text); font-size: 15px; font-weight: 400; }
+.subnav__links a.is-active { font-weight: 500; }
+.toc ol a { font-size: 15px; }
+.toc__chap { font-weight: 700; }
+.faq-tab { font-family: var(--ff-text); font-weight: 500; }
+
+/* ---------- pied de page ---------- */
+.av-footer { font-family: var(--ff-text); font-weight: 300; }
+.av-footer__grid { font-size: 15px; }
+.av-footer__h { font-family: var(--ff-title); font-size: 15px; font-weight: 700; }
+.av-review__platform { font-family: var(--ff-title); font-weight: 700; }
+
+/* ---------- tablette ---------- */
+@media (max-width: 980px) {
+  .hero h1 { font-size: 40px; }
+  .h2, .cta h2, .cta-box__text h2 { font-size: 32px; }
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 760px) {
+  body { font-size: 15px; }
+  .hero h1 { font-size: 30px; line-height: 1.2; }
+  .h2, .cta h2, .cta-box__text h2 { font-size: 25px; line-height: 1.25; }
+  .hero__intro, .hero__lead, .lead, .summary__answer { font-size: 16px; }
+  .card__text, .dossier__desc, .faq-item__a, .faq__a p, .notes li, .check li, .hcard p, .hcard ul,
+  .mosq p, .kit p, .brief p, .tip, .panel-dark p, .dot-list, .seasons4__grid li, .cta p, .cta-box__text p,
+  .sim-acc .faq-item__a, .notice p { font-size: 15px; }
+  .table-box table, .season-table { font-size: 14.5px; }
+  .rub h3, .live__head h3 { font-size: 21px; }
+  .chapter__name { font-size: 20px; }
+  .rub__sub, .seasons4__title, .pack__title { font-size: 19px; }
+  .card__title, .see-also__t, .tip__title { font-size: 17px; }
+  .dossier__title, .place__name { font-size: 19px; }
+  .vplayer__title { font-size: 19px; }
+  .panel-dark p.panel-dark__t { font-size: 20px; }
+  .faq-item summary { font-size: 15.5px; }
+  .faq__item h3 { font-size: 16px; }
+  .btn, .av-btn { font-size: 13px; letter-spacing: .03em; }
+  .btn--small, .btn--ghost-green { font-size: 12.5px; }
+  .av-reviews__title { font-size: 20px; }
+  .av-footer__grid { font-size: 14.5px; }
+  .subnav__links { font-size: 14px; }
+}

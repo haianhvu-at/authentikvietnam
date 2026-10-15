@@ -4,8 +4,11 @@
   (Firebase ne le publie pas : « _partials/** » est exclu dans firebase.json.)
 
   Dans une nouvelle page :
-  1. Dans <head>, après les polices Google (Montserrat + Open Sans) :
+  1. Dans <head> : les polices Google (Raleway + Be Vietnam Pro, voir l'en-tête de assets/site/typo.css),
+     puis site.css AVANT la feuille de la page, et typo.css APRÈS :
        <link rel="stylesheet" href="RACINE/assets/site/site.css?v=1">
+       <link rel="stylesheet" href="RACINE/assets/css/(feuille de la page).css">
+       <link rel="stylesheet" href="RACINE/assets/site/typo.css?v=1">
   2. Juste avant </body> :
        <script src="RACINE/assets/site/site.js?v=1" defer></script>
   3. Remplacer RACINE par le chemin vers la racine du site :
