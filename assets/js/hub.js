@@ -111,11 +111,11 @@
     window.addEventListener('hashchange', openFromHash);
   }
 
-  /* ---------- FAQ : tout est replié, une seule réponse ouverte à la fois ---------- */
+  /* ---------- Listes dépliantes (FAQ, conseils carte SIM) : une seule réponse ouverte par liste ---------- */
   Array.prototype.forEach.call(doc.querySelectorAll('.faq-item'), function (item) {
     item.addEventListener('toggle', function () {
       if (!item.open) return;
-      var siblings = doc.querySelectorAll('.faq-item[open]');
+      var siblings = item.parentNode.querySelectorAll('.faq-item[open]');
       Array.prototype.forEach.call(siblings, function (s) { if (s !== item) s.open = false; });
     });
   });

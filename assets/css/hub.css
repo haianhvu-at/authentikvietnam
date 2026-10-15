@@ -178,7 +178,8 @@ picture{display:block}
 .panel-dark p{opacity:.92;font-size:14.5px}
 .panel-dark__k{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85;margin:0 !important}
 .panel-dark__t{font-family:var(--ff-title);font-size:22px;font-weight:800;margin:4px 0 8px !important}
-.app-icon{width:40px;height:40px;border-radius:12px;background:var(--green-tint);color:var(--green);display:inline-flex;align-items:center;justify-content:center;font-family:var(--ff-title);font-weight:800;margin-bottom:6px}
+.app-icon{display:block;width:44px;height:44px;border-radius:11px;object-fit:cover;box-shadow:0 0 0 1px rgba(38,35,31,.08);margin-bottom:10px}
+.app-icons{display:flex;gap:8px}
 .phrase{text-align:center}
 .phrase__vi{font-family:var(--ff-title);font-size:26px;font-weight:800;color:var(--brown);margin:0}
 .phrase__fr{font-size:14px;color:var(--muted);margin:0}
@@ -211,6 +212,7 @@ picture{display:block}
 .faq-item[open] summary:hover{background:transparent}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary h3{margin:0;font-size:inherit;font-weight:inherit;line-height:1.4}
+.rub .faq-item__a p{margin:0}
 .faq-item__icon{flex:0 0 26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:20px;line-height:1;background:#fff;border:1px solid var(--line);color:var(--green);transition:transform .2s}
 .faq-item[open] .faq-item__icon{transform:rotate(45deg);color:var(--brown)}
 .faq-item__a{padding:0 18px 16px;font-size:15px;color:#3F3A33}
@@ -285,7 +287,9 @@ picture{display:block}
 .sim-offer{margin-bottom:0}
 .sim-offer .stat{color:var(--green)}
 .rub p.table-note{margin:10px 0 18px;font-size:13px;font-style:italic;color:var(--muted-2)}
-.sim-tips__wide{grid-column:1/-1}
+.sim-acc{margin-top:22px;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
+.faq-item summary .sim-acc__q{line-height:1.4}
+.sim-acc .faq-item__a{font-size:14.5px}
 .rub p.sim__more{margin:18px 0 0}
 
 @media (max-width:760px){
@@ -294,6 +298,16 @@ picture{display:block}
   .faq-tab{flex:0 0 auto;min-height:40px;padding:6px 14px;font-size:13.5px}
   .faq-item summary{padding:12px 14px;font-size:15px}
   .faq-item__a{padding:0 14px 14px}
+}
+
+/* Mobile : cartes en ligne, on les fait glisser horizontalement */
+@media (max-width:760px){
+  .swipe{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:16px;margin:0 -16px;padding:2px 16px 10px;scrollbar-width:none}
+  .swipe::-webkit-scrollbar{display:none}
+  .swipe > *{scroll-snap-align:start;min-width:0}
+  .swipe .card{padding:16px}
+  .sim-offer.swipe{grid-auto-columns:62%}
+  .sim-offer .stat--md{font-size:20px}
 }
 
 /* ---------- Responsive ---------- */
