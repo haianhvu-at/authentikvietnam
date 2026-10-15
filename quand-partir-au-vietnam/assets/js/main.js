@@ -1,5 +1,6 @@
 /* Quand partir au Vietnam — Authentik Vietnam
-   Menu mobile, onglets, valise, mois en cours, retour en haut, météo 7 jours. */
+   Sommaire actif, onglets, valise, mois en cours, météo 7 jours.
+   (Menu mobile et bouton « haut de page » : /assets/site/site.js) */
 (function () {
   "use strict";
 
@@ -13,29 +14,9 @@
     return d.toISOString().slice(0, 10);
   }
 
-  /* ---------- menu mobile ---------- */
-  var burger = $(".nav__burger");
-  var mobileMenu = $("#menu-mobile");
-  function closeMenu() {
-    if (!burger) return;
-    burger.setAttribute("aria-expanded", "false");
-    burger.setAttribute("aria-label", "Ouvrir le menu");
-    mobileMenu.hidden = true;
-  }
-  if (burger && mobileMenu) {
-    burger.addEventListener("click", function () {
-      var open = burger.getAttribute("aria-expanded") === "true";
-      burger.setAttribute("aria-expanded", String(!open));
-      burger.setAttribute("aria-label", open ? "Ouvrir le menu" : "Fermer le menu");
-      mobileMenu.hidden = open;
-    });
-    $$("a", mobileMenu).forEach(function (a) { a.addEventListener("click", closeMenu); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
-    window.addEventListener("resize", function () { if (window.innerWidth > 960) closeMenu(); });
-  }
-
-  /* ---------- lien actif dans la navbar ---------- */
-  var navLinks = $$(".nav__links a");
+  /* ---------- rubrique active dans le sommaire de la page ---------- */
+  var subnav = $(".subnav__links");
+  var navLinks = $$(".subnav__links a");
   if ("IntersectionObserver" in window && navLinks.length) {
     var byId = {};
     navLinks.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
@@ -43,7 +24,15 @@
       entries.forEach(function (en) {
         if (en.isIntersecting && byId[en.target.id]) {
           navLinks.forEach(function (a) { a.classList.remove("is-active"); });
-          byId[en.target.id].classList.add("is-active");
+          var link = byId[en.target.id];
+          link.classList.add("is-active");
+          // sur mobile, faire défiler le sommaire pour garder la rubrique visible (sans bouger la page)
+          if (subnav && subnav.scrollWidth > subnav.clientWidth) {
+            var left = link.offsetLeft - subnav.offsetLeft;
+            if (left < subnav.scrollLeft || left + link.offsetWidth > subnav.scrollLeft + subnav.clientWidth) {
+              subnav.scrollTo({ left: Math.max(0, left - 12), behavior: "smooth" });
+            }
+          }
         }
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
@@ -69,14 +58,6 @@
     track.addEventListener("scroll", update, { passive: true });
     update();
   });
-
-  /* ---------- retour en haut ---------- */
-  var toTop = $(".to-top");
-  if (toTop) {
-    var onScroll = function () { toTop.classList.toggle("is-visible", window.scrollY > 600); };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
 
   /* ---------- mois en cours ---------- */
   var monthNow = Number(todayVN().slice(5, 7)) - 1;

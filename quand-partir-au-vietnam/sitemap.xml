@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Ancien sitemap de la page : le sitemap principal est à la racine (https://authentik-vietnam.web.app/sitemap.xml). Ce fichier peut être supprimé. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://haianhvu-at.github.io/authentikvietnam/quand-partir-au-vietnam/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <image:image><image:loc>https://haianhvu-at.github.io/authentikvietnam/quand-partir-au-vietnam/assets/img/og-quand-partir-vietnam.jpg</image:loc></image:image>
+    <loc>https://authentik-vietnam.web.app/quand-partir-au-vietnam/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <image:image><image:loc>https://authentik-vietnam.web.app/quand-partir-au-vietnam/assets/img/og-quand-partir-vietnam.jpg</image:loc></image:image>
   </url>
 </urlset>

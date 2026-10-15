@@ -1,0 +1,87 @@
+<!--
+  MODÈLE COMMUN AUTHENTIK VIETNAM : PIED DE PAGE + BOUTONS FLOTTANTS
+  Ce fichier n'est pas une page : il sert à copier-coller le même bloc dans chaque page.
+  (Firebase ne le publie pas : « _partials/** » est exclu dans firebase.json.)
+
+  Dans une nouvelle page :
+  1. Dans <head>, après les polices Google (Montserrat + Open Sans) :
+       <link rel="stylesheet" href="RACINE/assets/site/site.css?v=1">
+  2. Juste avant </body> :
+       <script src="RACINE/assets/site/site.js?v=1" defer></script>
+  3. Remplacer RACINE par le chemin vers la racine du site :
+       page à la racine (hub)            → rien     (ex. assets/site/site.css)
+       page dans un dossier (/xxx/)      → ../      (ex. ../assets/site/site.css)
+  4. La page doit avoir <main id="contenu"> (le bouton « haut de page » y renvoie).
+
+  La dernière ligne (© …) peut recevoir des crédits propres à la page, après « Authentik Vietnam · ».
+  Les notes d'avis (Tripadvisor, Google, Trustpilot) sont à mettre à jour dans TOUTES les pages.
+-->
+<!-- ============ PIED DE PAGE COMMUN (modèle : /_partials/footer.html) ============ -->
+<footer class="av-footer">
+  <div class="av-wrap">
+    <!-- Notes relevées le 14/10/2026 : à mettre à jour de temps en temps -->
+    <section class="av-reviews" aria-labelledby="av-reviews-title">
+      <h2 class="av-reviews__title" id="av-reviews-title">Ils ont voyagé avec nous</h2>
+      <div class="av-reviews__grid">
+        <a class="av-review" href="https://www.tripadvisor.com/Attraction_Review-g293924-d11641267-Reviews-Authentik_Vietnam_Travel-Hanoi.html" rel="noopener" target="_blank">
+          <span class="av-review__platform"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h.01M16 12h.01"/></svg>Tripadvisor</span>
+          <span class="av-review__score"><b>5,0</b><span class="av-stars" aria-hidden="true">★★★★★</span></span>
+          <span class="av-review__count">Plus de 2 000 avis voyageurs</span>
+          <span class="av-review__more">Lire les avis →</span>
+        </a>
+        <a class="av-review" href="https://maps.app.goo.gl/19Yf7CU87P3e6jJ69" rel="noopener" target="_blank">
+          <span class="av-review__platform"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Google</span>
+          <span class="av-review__score"><b>4,9</b><span class="av-stars" aria-hidden="true">★★★★★</span></span>
+          <span class="av-review__count">Plus de 900 avis sur Google Maps</span>
+          <span class="av-review__more">Lire les avis →</span>
+        </a>
+        <a class="av-review" href="https://www.trustpilot.com/review/authentikvietnam.com" rel="noopener" target="_blank">
+          <span class="av-review__platform"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>Trustpilot</span>
+          <span class="av-review__score"><b>4,9</b><span class="av-stars" aria-hidden="true">★★★★★</span></span>
+          <span class="av-review__count">Plus de 340 avis vérifiés</span>
+          <span class="av-review__more">Lire les avis →</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="av-footer__grid">
+      <div class="av-footer__col av-footer__col--brand">
+        <img src="RACINE/assets/site/logo-authentik.png" alt="Authentik Vietnam Travel" width="446" height="120" loading="lazy">
+        <p><a href="https://authentikvietnam.com/" target="_blank" rel="noopener">Agence voyage Vietnam</a>, spécialiste locale francophone basée à Hanoï et Saïgon. Voyages sur mesure au Vietnam, au Cambodge et au Laos.</p>
+      </div>
+      <div class="av-footer__col">
+        <p class="av-footer__h">Contact</p>
+        <a href="https://wa.me/84912121091" target="_blank" rel="noopener">Hotline &amp; WhatsApp : <span class="av-nowrap">+84 912 121 091</span></a>
+        <a href="tel:+842439270099">Bureau de Hanoï : <span class="av-nowrap">+84 24 39 27 00 99</span></a>
+        <a href="mailto:info@authentikvietnam.com">info@authentikvietnam.com</a>
+        <a href="https://maps.app.goo.gl/19Yf7CU87P3e6jJ69" target="_blank" rel="noopener">62 Yên Phụ, Ba Đình, Hà Nội</a>
+      </div>
+      <nav class="av-footer__col" aria-label="Nos guides">
+        <p class="av-footer__h">Nos guides</p>
+        <a href="https://authentik-vietnam.web.app/">Infos pratiques : avant de partir</a>
+        <a href="https://authentik-vietnam.web.app/quand-partir-au-vietnam/">Quand partir au Vietnam</a>
+      </nav>
+      <nav class="av-footer__col" aria-label="Voyager avec Authentik">
+        <p class="av-footer__h">Voyager avec Authentik</p>
+        <a href="https://authentikvietnam.com/creer-votre-voyage-sur-mesure" target="_blank" rel="noopener">Créer votre voyage sur mesure</a>
+        <a href="https://authentikvietnam.com/voyage-au-vietnam" target="_blank" rel="noopener">Circuits privés</a>
+        <a href="https://authentikvietnam.com/petit-groupe/circuit-vietnam-petit-groupe" target="_blank" rel="noopener">Voyages en petit groupe</a>
+        <a href="https://authentikvietnam.com/blog-de-voyage-au-vietnam" target="_blank" rel="noopener">Blog de voyage</a>
+      </nav>
+    </div>
+    <div class="av-footer__bottom">© <span class="av-year">2026</span> Authentik Vietnam</div>
+  </div>
+</footer>
+
+<!-- ============ BOUTONS FLOTTANTS COMMUNS ============ -->
+<div class="av-fabs">
+  <a class="av-fab av-fab--top is-hidden" href="#contenu" aria-label="Revenir en haut de page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+  <a class="av-fab av-fab--home" href="https://authentikvietnam.com/" target="_blank" rel="noopener" aria-label="Site Authentik Vietnam" title="Site Authentik Vietnam">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20h5v-6h4v6h5V9.5"/></svg>
+  </a>
+  <a class="av-fab av-fab--wa" href="https://wa.me/84912121091" target="_blank" rel="noopener" aria-label="Écrire à Authentik Vietnam sur WhatsApp">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.2-1.6-2.2-1-1 .9c-1-.4-2-1.4-2.4-2.4l.9-1-1-2.2z"/></svg>
+  </a>
+</div>

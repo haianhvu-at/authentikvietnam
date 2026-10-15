@@ -1,28 +1,10 @@
 /* Authentik Vietnam · Hub « Infos pratiques »
-   Amélioration progressive : sans JS, tout le contenu reste visible. */
+   Amélioration progressive : sans JS, tout le contenu reste visible.
+   (Menu mobile et bouton « haut de page » : /assets/site/site.js) */
 (function () {
   'use strict';
   var doc = document;
   doc.documentElement.classList.add('js');
-
-  /* ---------- Menu mobile ---------- */
-  var burger = doc.querySelector('.burger');
-  var mobileNav = doc.getElementById('mobile-nav');
-  if (burger && mobileNav) {
-    burger.addEventListener('click', function () {
-      var open = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!open));
-      burger.setAttribute('aria-label', open ? 'Ouvrir le menu' : 'Fermer le menu');
-      mobileNav.hidden = open;
-    });
-    mobileNav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        mobileNav.hidden = true;
-        burger.setAttribute('aria-expanded', 'false');
-        burger.setAttribute('aria-label', 'Ouvrir le menu');
-      }
-    });
-  }
 
   /* ---------- Sommaire : replié sur mobile ---------- */
   var toc = doc.querySelector('.toc');
@@ -137,12 +119,4 @@
       Array.prototype.forEach.call(siblings, function (s) { if (s !== item) s.open = false; });
     });
   });
-
-  /* ---------- Bouton « haut de page » ---------- */
-  var topBtn = doc.querySelector('.fab--top');
-  if (topBtn) {
-    var onScroll = function () { topBtn.classList.toggle('is-hidden', window.scrollY < 600); };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
 })();

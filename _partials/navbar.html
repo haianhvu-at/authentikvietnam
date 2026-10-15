@@ -1,0 +1,44 @@
+<!--
+  MODÈLE COMMUN AUTHENTIK VIETNAM : NAVBAR
+  Ce fichier n'est pas une page : il sert à copier-coller le même bloc dans chaque page.
+  (Firebase ne le publie pas : « _partials/** » est exclu dans firebase.json.)
+
+  Dans une nouvelle page :
+  1. Dans <head>, après les polices Google (Montserrat + Open Sans) :
+       <link rel="stylesheet" href="RACINE/assets/site/site.css?v=1">
+  2. Juste avant </body> :
+       <script src="RACINE/assets/site/site.js?v=1" defer></script>
+  3. Remplacer RACINE par le chemin vers la racine du site :
+       page à la racine (hub)            → rien     (ex. assets/site/site.css)
+       page dans un dossier (/xxx/)      → ../      (ex. ../assets/site/site.css)
+  4. La page doit avoir <main id="contenu"> (le bouton « haut de page » y renvoie).
+
+  MENU : quand une nouvelle page est en ligne, ajouter son lien ici ET dans toutes les pages
+  (même ordre partout). Sur la page en cours, ajouter aria-current="page" à son lien
+  (dans le menu ordinateur ET le menu mobile).
+  Option : un sommaire propre à la page peut être ajouté juste avant </header>
+  (voir « Sur cette page » dans quand-partir-au-vietnam/index.html).
+-->
+<!-- ============ NAVBAR COMMUNE (modèle : /_partials/navbar.html · styles : /assets/site/site.css) ============ -->
+<header class="av-header">
+  <div class="av-wrap av-header__bar">
+    <a class="av-header__logo" href="https://authentikvietnam.com/" aria-label="Authentik Vietnam Travel – site de l’agence">
+      <picture>
+        <source srcset="RACINE/assets/site/logo-authentik.webp" type="image/webp">
+        <img src="RACINE/assets/site/logo-authentik.png" alt="Authentik Vietnam Travel" width="446" height="120">
+      </picture>
+    </a>
+    <nav class="av-menu" aria-label="Menu principal">
+      <a href="https://authentik-vietnam.web.app/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20h5v-6h4v6h5V9.5"/></svg><span>Infos pratiques</span></a>
+      <a href="https://authentik-vietnam.web.app/quand-partir-au-vietnam/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Quand partir</span></a>
+    </nav>
+    <div class="av-header__actions">
+      <a class="av-btn" href="https://authentikvietnam.com/creer-votre-voyage-sur-mesure" target="_blank" rel="noopener"><span class="av-btn__long">Demander un devis</span><span class="av-btn__short">Devis</span></a>
+      <button class="av-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="av-mobile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav class="av-mobile" id="av-mobile" aria-label="Menu principal (mobile)" hidden>
+      <a href="https://authentik-vietnam.web.app/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20h5v-6h4v6h5V9.5"/></svg>Infos pratiques</a>
+      <a href="https://authentik-vietnam.web.app/quand-partir-au-vietnam/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Quand partir au Vietnam</a>
+  </nav>
+</header>
