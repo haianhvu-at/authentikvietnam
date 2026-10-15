@@ -119,4 +119,50 @@
       Array.prototype.forEach.call(siblings, function (s) { if (s !== item) s.open = false; });
     });
   });
+
+  /* ---------- Lecteur vidéo : lecture sur la page + vignettes « À suivre » ---------- */
+  var player = doc.querySelector('[data-vplayer]');
+  if (player) {
+    var frame = player.querySelector('.vplayer__frame');
+    var mainTitle = player.querySelector('.vplayer__title');
+    var mainMeta = player.querySelector('.vplayer__meta');
+    var poster = player.querySelector('.vplayer__poster');
+    var current = {
+      id: poster.getAttribute('data-yt'),
+      title: mainTitle.textContent,
+      meta: mainMeta.textContent.replace(/ · Authentik Vietnam$/, '')
+    };
+    var play = function (v) {
+      var f = doc.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + v.id + '?autoplay=1&rel=0&modestbranding=1';
+      f.title = v.title;
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.allowFullscreen = true;
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      frame.innerHTML = '';
+      frame.appendChild(f);
+      mainTitle.textContent = v.title;
+      mainMeta.textContent = v.meta + ' · Authentik Vietnam';
+    };
+    poster.addEventListener('click', function (e) { e.preventDefault(); play(current); });
+    player.querySelectorAll('.vitem').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var next = { id: a.getAttribute('data-yt'), title: a.getAttribute('data-title'), meta: a.getAttribute('data-meta') };
+        // la vidéo principale prend la place de la vignette cliquée
+        a.setAttribute('data-yt', current.id);
+        a.setAttribute('data-title', current.title);
+        a.setAttribute('data-meta', current.meta);
+        a.href = 'https://www.youtube.com/watch?v=' + current.id;
+        a.querySelector('img').src = 'https://i.ytimg.com/vi/' + current.id + '/mqdefault.jpg';
+        a.querySelector('.vitem__title').textContent = current.title;
+        a.querySelector('.vitem__meta').textContent = current.meta;
+        current = next;
+        play(current);
+        if (frame.getBoundingClientRect().top < 0 || window.innerWidth <= 980) {
+          frame.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  }
 })();
