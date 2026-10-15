@@ -191,26 +191,29 @@ picture{display:block}
 .dark-link__a{font-weight:700;color:var(--yellow)}
 
 /* ---------- FAQ ---------- */
-.faq-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.faq-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .faq-tabs[hidden]{display:none}
 .faq-tab{min-height:44px;cursor:pointer;padding:8px 16px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:700;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
 .faq-tab:hover{border-color:var(--green)}
 .faq-tab[aria-selected="true"]{background:var(--green);border-color:var(--green);color:#fff}
 .faq-tab span{opacity:.7;font-weight:600}
-.faq-panel{display:flex;flex-direction:column;gap:10px}
-.faq-panel + .faq-panel{margin-top:28px}
+.faq-panel{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
+.faq-panel + .faq-panel{margin-top:20px}
 .js .faq-panel + .faq-panel{margin-top:0}
-.faq-panel__title{font-family:var(--ff-title);font-size:18px;font-weight:800;margin:0 0 4px}
+.faq-panel__title{font-family:var(--ff-title);font-size:15px;font-weight:800;margin:0;padding:12px 18px;background:var(--sand);border-bottom:1px solid var(--line)}
 .js .faq-panel__title{display:none}
 .faq-panel[hidden]{display:none}
-.faq-item{border-radius:16px;border:1px solid var(--line);background:var(--cream)}
-.faq-item[open]{border-color:var(--green-line);background:#F4FAF5}
-.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;min-height:56px;font-family:var(--ff-title);font-size:16.5px;font-weight:700}
+.faq-item{border:0;border-bottom:1px solid var(--line);background:#fff}
+.faq-item:last-child{border-bottom:0}
+.faq-item[open]{background:#F4FAF5}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 18px;min-height:52px;font-family:var(--ff-title);font-size:15.5px;font-weight:700}
+.faq-item summary:hover{background:var(--cream)}
+.faq-item[open] summary:hover{background:transparent}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary h3{margin:0;font-size:inherit;font-weight:inherit;line-height:1.4}
-.faq-item__icon{flex:0 0 28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:20px;line-height:1;background:#fff;border:1px solid var(--line);color:var(--green);transition:transform .2s}
+.faq-item__icon{flex:0 0 26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:20px;line-height:1;background:#fff;border:1px solid var(--line);color:var(--green);transition:transform .2s}
 .faq-item[open] .faq-item__icon{transform:rotate(45deg);color:var(--brown)}
-.faq-item__a{padding:0 20px 20px;font-size:15px;color:#3F3A33}
+.faq-item__a{padding:0 18px 16px;font-size:15px;color:#3F3A33}
 .faq-item__a p{margin:0 0 8px}
 .faq-item__a p:last-child{margin-bottom:0}
 .faq-item__a ul{margin:0 0 8px;padding-left:20px}
@@ -274,6 +277,23 @@ picture{display:block}
   .vplayer__list{grid-template-columns:1fr}
   .vitem__thumb{flex-basis:140px}
   .vplayer__more .btn{width:100%}
+}
+
+/* ---------- Carte SIM Vietnam (rubrique 11) ---------- */
+.sim{margin-top:28px}
+.rub__sub{margin:0 0 10px;font-family:var(--ff-title);font-size:19px;font-weight:800;line-height:1.3}
+.sim-offer{margin-bottom:0}
+.sim-offer .stat{color:var(--green)}
+.rub p.table-note{margin:10px 0 18px;font-size:13px;font-style:italic;color:var(--muted-2)}
+.sim-tips__wide{grid-column:1/-1}
+.rub p.sim__more{margin:18px 0 0}
+
+@media (max-width:760px){
+  .faq-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px 14px;padding:0 16px 4px}
+  .faq-tabs::-webkit-scrollbar{display:none}
+  .faq-tab{flex:0 0 auto;min-height:40px;padding:6px 14px;font-size:13.5px}
+  .faq-item summary{padding:12px 14px;font-size:15px}
+  .faq-item__a{padding:0 14px 14px}
 }
 
 /* ---------- Responsive ---------- */

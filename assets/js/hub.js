@@ -111,11 +111,11 @@
     window.addEventListener('hashchange', openFromHash);
   }
 
-  /* ---------- FAQ : une seule réponse ouverte par thème ---------- */
+  /* ---------- FAQ : tout est replié, une seule réponse ouverte à la fois ---------- */
   Array.prototype.forEach.call(doc.querySelectorAll('.faq-item'), function (item) {
     item.addEventListener('toggle', function () {
       if (!item.open) return;
-      var siblings = item.parentNode.querySelectorAll('.faq-item[open]');
+      var siblings = doc.querySelectorAll('.faq-item[open]');
       Array.prototype.forEach.call(siblings, function (s) { if (s !== item) s.open = false; });
     });
   });
