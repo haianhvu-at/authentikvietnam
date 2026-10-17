@@ -36,4 +36,21 @@
   /* ---------- année du copyright ---------- */
   var year = doc.querySelector(".av-year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  /* ---------- compteur de vues (pied de page) ----------
+     Un seul compteur pour tout le site (toutes pages confondues), service gratuit hitscounter.dev :
+     +1 à chaque page affichée. Si le service ne répond pas, le compteur reste masqué.
+     Les statistiques détaillées restent dans Google Analytics 4. */
+  var views = doc.querySelector(".av-views");
+  if (views && window.fetch && /authentik-vietnam\.web\.app$/.test(location.hostname)) {
+    fetch("https://hitscounter.dev/api/hit?url=" + encodeURIComponent("https://authentik-vietnam.web.app") + "&output=json", { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        var n = d && Number(d.total_hits);
+        if (!n) return;
+        views.querySelector(".av-views__n").textContent = n.toLocaleString("fr-FR");
+        views.hidden = false;
+      })
+      .catch(function () {});
+  }
 })();
