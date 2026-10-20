@@ -18,7 +18,7 @@
     });
     menu.addEventListener("click", function (e) { if (e.target.closest("a")) setOpen(false); });
     doc.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
-    window.addEventListener("resize", function () { if (window.innerWidth > 760) setOpen(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth > 980) setOpen(false); });
   }
 
   /* ---------- bouton « haut de page » ---------- */
