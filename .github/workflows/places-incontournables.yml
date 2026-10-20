@@ -1,0 +1,59 @@
+# Met à jour chaque jour la carte de la page « Incontournables du Vietnam » depuis le Google Sheet publié.
+# Script : incontournables-vietnam/scripts/update-places.mjs (mode d'emploi : incontournables-vietnam/README.md).
+# Réglages facultatifs (Settings › Secrets and variables › Actions › Variables) :
+#   PLACES_CSV_URL     adresse CSV de l'onglet publié (sinon l'adresse écrite dans le script)
+#   PLACES_SHOW_DRAFT  1 = afficher aussi les lieux « draft », 0 = seulement « published »
+name: Carte – incontournables du Vietnam
+
+on:
+  schedule:
+    - cron: "37 22 * * *" # 22:37 UTC = 05:37 heure du Vietnam, avant le déploiement Firebase de 22:47
+  workflow_dispatch: # bouton « Run workflow » dans l'onglet Actions : met à jour la carte puis publie le site
+
+permissions:
+  contents: write
+  actions: write # pour lancer le déploiement Firebase après un lancement manuel
+
+concurrency:
+  group: places-incontournables
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Lire le Google Sheet et mettre à jour la carte
+        run: node incontournables-vietnam/scripts/update-places.mjs
+        env:
+          PLACES_CSV_URL: ${{ vars.PLACES_CSV_URL }}
+          SHOW_DRAFT: ${{ vars.PLACES_SHOW_DRAFT }}
+
+      - name: Enregistrer les données
+        id: save
+        run: |
+          if git diff --quiet -- incontournables-vietnam; then
+            echo "Aucun changement."
+            echo "changed=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898810+github-actions[bot]@users.noreply.github.com"
+          git add incontournables-vietnam/data incontournables-vietnam/index.html
+          git commit -m "Carte incontournables : mise à jour automatique depuis le Google Sheet"
+          git pull --rebase
+          git push
+          echo "changed=1" >> "$GITHUB_OUTPUT"
+
+      # Les commits faits par ce workflow ne relancent pas « Deploy Firebase Hosting » :
+      # en lancement manuel, on le démarre ici ; sinon le déploiement quotidien de 22:47 s'en charge.
+      - name: Publier le site tout de suite
+        if: github.event_name == 'workflow_dispatch' && steps.save.outputs.changed == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run firebase-deploy.yml --ref main
