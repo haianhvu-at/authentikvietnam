@@ -59,6 +59,11 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/cite-imperiale-de-Thang-long-hanoi.png",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/col-de-hai-van-plus-col-vietnam": {
+  "og": "https://authentikvietnam.com/media/blog/%C4%91%C3%A8o-H%E1%BA%A3i-V%C3%A2n.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/%C4%91%C3%A8o-H%E1%BA%A3i-V%C3%A2n.jpg",
+  "checked": "2026-10-21"
+ },
  "https://authentikvietnam.com/col-de-ma-pi-leng-au-plateau-de-dong-van-ha-giang": {
   "og": "https://authentikvietnam.com/media/blog/col-ma-pi-leng-ha-giang-vietnam-blog-voyage.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/col-ma-pi-leng-ha-giang-vietnam-blog-voyage.jpg",
@@ -88,6 +93,16 @@
   "og": "https://authentikvietnam.com/media/blog/hanoi-lac-ouest-coucher-soleil.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/hanoi-lac-ouest-coucher-soleil.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/kayak-nho-que": {
+  "og": "https://authentikvietnam.com/media/blog/ava.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/ava.jpg",
+  "checked": "2026-10-21"
+ },
+ "https://authentikvietnam.com/la-pagode-tay-phuong-musee-des-sculptures-d-exception": {
+  "og": "https://authentikvietnam.com/media/blog/pagode-tay-phuong-hanoi-blog-voyage-au-vietnam.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/pagode-tay-phuong-hanoi-blog-voyage-au-vietnam.jpg",
+  "checked": "2026-10-21"
  },
  "https://authentikvietnam.com/la-pagode-tran-quoc-hanoi": {
   "og": "https://authentikvietnam.com/media/blog/lac-ho-tay-pagode-tran-quoc.jpg",
@@ -144,6 +159,11 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/700x466-place-ba-dinh.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/musee-beaux-arts-hanoi": {
+  "og": "https://authentikvietnam.com/media/blog/musee-Beaux-arts-Vietnam-Hanoi.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/musee-Beaux-arts-Vietnam-Hanoi.jpg",
+  "checked": "2026-10-21"
+ },
  "https://authentikvietnam.com/musee-d-ethnographie-viet-nam-musee-hanoi": {
   "og": "https://authentikvietnam.com/media/blog/musee-ethnographie-hanoi.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/musee-ethnographie-hanoi.jpg",
@@ -154,10 +174,20 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/musee-de-la-guerre-ho-chi-minh-ville-blog-voyage.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/musee-des-femmes-vietnam-visiter-hanoi": {
+  "og": "https://authentikvietnam.com/media/blog/musee-femmes-vietnam-hanoi-blog-voyage.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/musee-femmes-vietnam-hanoi-blog-voyage.jpg",
+  "checked": "2026-10-21"
+ },
  "https://authentikvietnam.com/musee-histoire-militaire-vietnam-hanoi": {
   "og": "https://authentikvietnam.com/media/blog/musee-histoire-militaire-vietnam-hanoi.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/musee-histoire-militaire-vietnam-hanoi.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/musee-national-histoire-vietnam-a-hanoi": {
+  "og": "https://authentikvietnam.com/media/blog/700x466-thumb-authentik-bao-tang-lich-su-quoc-gia-vietnam.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/700x466-thumb-authentik-bao-tang-lich-su-quoc-gia-vietnam.jpg",
+  "checked": "2026-10-21"
  },
  "https://authentikvietnam.com/musee-sculpture-cham-da-nang-tresor-royaume-champa": {
   "og": "https://authentikvietnam.com/media/blog/musee-cham-danang-blog-voyage-vietnam.jpg",
@@ -249,10 +279,20 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/Hanoi-Vietnam-quartier-francais.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/rencontre-des-tay-village-tha-a-ha-giang-vietnam": {
+  "og": "https://authentikvietnam.com/media/blog/700x466-thumb-authentik-thon-tha.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/700x466-thumb-authentik-thon-tha.jpg",
+  "checked": "2026-10-21"
+ },
  "https://authentikvietnam.com/reserve-naturelle-van-long-ninh-binh": {
   "og": "https://authentikvietnam.com/media/blog/reserve-naturelle-van-long.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/reserve-naturelle-van-long.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/rue-du-train-hanoi-blog": {
+  "og": "https://authentikvietnam.com/media/blog/700x466-rue-du-train-hanoi.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/700x466-rue-du-train-hanoi.jpg",
+  "checked": "2026-10-21"
  },
  "https://authentikvietnam.com/rue-hang-ma-hanoi": {
   "og": "https://authentikvietnam.com/media/blog/z4723495484359_7beec6fabaf387d68e5d5b75ba0cd806.jpg",
