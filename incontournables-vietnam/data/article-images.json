@@ -9,6 +9,11 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/village-artisanal-autour-Hanoi.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/11-attractions-incontournables-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/ninh-binh-que-faire-que-voir.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/ninh-binh-que-faire-que-voir.jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/3-villages-pecheurs-visiter-baie-halong": {
   "og": "https://authentikvietnam.com/media/blog/villages-pecheurs-baie-halong-guide-voyage.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/villages-pecheurs-baie-halong-guide-voyage.jpg",
@@ -33,6 +38,11 @@
   "og": "https://authentikvietnam.com/media/blog/visiter-ho-chi-minh-ville-blog-voyage-au-vietnam.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/visiter-ho-chi-minh-ville-blog-voyage-au-vietnam.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/bich-dong-pagode-de-jade-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/pagode-de-jade-bich-dong-ninh-binh-blog-voyage.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/pagode-de-jade-bich-dong-ninh-binh-blog-voyage.jpg",
+  "checked": "2026-10-22"
  },
  "https://authentikvietnam.com/broderie-ninh-binh": {
   "og": "https://authentikvietnam.com/media/blog/Broderie-Ninh-Binh.png",
@@ -74,15 +84,35 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/ancien-village-Duong-Lam.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/feuilles-riz-village-cheu": {
+  "og": "https://authentikvietnam.com/media/blog/feuilles-riz-Cheu.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/feuilles-riz-Cheu.jpg",
+  "checked": "2026-10-22"
+ },
+ "https://authentikvietnam.com/grotte-mua-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/la-grotte-mua.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/la-grotte-mua.jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/grotte-nguom-ngao-visiter-cao-bang": {
   "og": "https://authentikvietnam.com/media/blog/grotte-Nguom-Ngao-cover.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/grotte-Nguom-Ngao-cover.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/grotte-thien-ha-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/grotte-Thien-Ha-entree.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/grotte-Thien-Ha-entree.jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/guide-vieux-quartier-hanoi": {
   "og": "https://authentikvietnam.com/media/blog/Hanoi-Vietnam-vieux-quartier.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/Hanoi-Vietnam-vieux-quartier.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/guide-voyage-nam-dinh": {
+  "og": "https://authentikvietnam.com/media/blog/Guide-voyage-Nam-Dinh.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/Guide-voyage-Nam-Dinh.jpg",
+  "checked": "2026-10-22"
  },
  "https://authentikvietnam.com/hanoi-pagode-dau-2000-ans-histoire": {
   "og": "https://authentikvietnam.com/media/blog/pagode-Dau-Hanoi.jpg",
@@ -93,6 +123,11 @@
   "og": "https://authentikvietnam.com/media/blog/hanoi-lac-ouest-coucher-soleil.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/hanoi-lac-ouest-coucher-soleil.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/hoa-lu-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/hoa-lu.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/hoa-lu.jpg",
+  "checked": "2026-10-22"
  },
  "https://authentikvietnam.com/kayak-nho-que": {
   "og": "https://authentikvietnam.com/media/blog/ava.jpg",
@@ -159,6 +194,11 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/700x466-place-ba-dinh.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/monastere-chau-son-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/monastere-chau-son-paysage-exterieur.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/monastere-chau-son-paysage-exterieur.jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/musee-beaux-arts-hanoi": {
   "og": "https://authentikvietnam.com/media/blog/musee-Beaux-arts-Vietnam-Hanoi.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/musee-Beaux-arts-Vietnam-Hanoi.jpg",
@@ -189,10 +229,35 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/700x466-thumb-authentik-bao-tang-lich-su-quoc-gia-vietnam.jpg",
   "checked": "2026-10-21"
  },
+ "https://authentikvietnam.com/musee-poesie-montagne-thuy-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/montagne-Thuy-Ninh-Binh-poeme-falaise.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/montagne-Thuy-Ninh-Binh-poeme-falaise.jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/musee-sculpture-cham-da-nang-tresor-royaume-champa": {
   "og": "https://authentikvietnam.com/media/blog/musee-cham-danang-blog-voyage-vietnam.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/musee-cham-danang-blog-voyage-vietnam.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/nam-dinh-que-voir-que-faire": {
+  "og": "https://authentikvietnam.com/media/blog/nam-dinh-hai-hau-que-voir-que-faire.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/nam-dinh-hai-hau-que-voir-que-faire.jpg",
+  "checked": "2026-10-22"
+ },
+ "https://authentikvietnam.com/ninh-binh-bai-dinh-pagode-records": {
+  "og": "https://authentikvietnam.com/media/blog/pagode-Bai-Dinh-nuit.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/pagode-Bai-Dinh-nuit.jpg",
+  "checked": "2026-10-22"
+ },
+ "https://authentikvietnam.com/ninh-binh-en-10-incontournables-baie-halong-terrestre": {
+  "og": "https://authentikvietnam.com/media/blog/10-incontournables-baie-halong-terrestre-blog.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/10-incontournables-baie-halong-terrestre-blog.jpg",
+  "checked": "2026-10-22"
+ },
+ "https://authentikvietnam.com/ninh-binh-village-sculptures-pierre-ninh-van": {
+  "og": "https://authentikvietnam.com/media/blog/village-Ninh-Van-sculpture-pierre-vieux.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/village-Ninh-Van-sculpture-pierre-vieux.jpg",
+  "checked": "2026-10-22"
  },
  "https://authentikvietnam.com/opera-de-hanoi-symbole-capitale-vietnamienne": {
   "og": "https://authentikvietnam.com/media/blog/visiter-opera-de-hanoi-guide.jpg",
@@ -243,6 +308,11 @@
   "og": "https://authentikvietnam.com/media/blog/parc-national-Ba-Vi-Hanoi.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/parc-national-Ba-Vi-Hanoi.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/paysage-attractions-trang-an-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/complexe-Trang-An-NInh-BInh.JPG",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/complexe-Trang-An-NInh-BInh.JPG",
+  "checked": "2026-10-22"
  },
  "https://authentikvietnam.com/peninsule-son-tra-ville-danang": {
   "og": "https://authentikvietnam.com/media/blog/Peninsule-Son-Tra-Danang.jpg",
@@ -314,6 +384,11 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/temple-bach-ma-a-hanoi.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/temple-duc-thanh-nguyen": {
+  "og": "https://authentikvietnam.com/media/blog/temple-de-Thanh-Nguyen-(1).jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/temple-de-Thanh-Nguyen-(1).jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/temple-litterature-hanoi": {
   "og": "https://authentikvietnam.com/media/blog/temple-litterature-Hanoi.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/temple-litterature-Hanoi.jpg",
@@ -329,6 +404,11 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/temple-quan-thanh-hanoi-blog.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/temple-thai-vi": {
+  "og": "https://authentikvietnam.com/media/blog/le-temple-thai-vi_2024-03-26_754.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/le-temple-thai-vi_2024-03-26_754.jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/temples-commemoratifs-aux-roi-hoa-lu-ninh-binh": {
   "og": "https://authentikvietnam.com/media/blog/temple-dinh-le-hoa-lu.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/temple-dinh-le-hoa-lu.jpg",
@@ -339,10 +419,20 @@
   "thumb": "https://authentikvietnam.com/media/blog/450_230/700x466-marionnettes-sur-l-eau.jpg",
   "checked": "2026-10-20"
  },
+ "https://authentikvietnam.com/thung-nham-parc-ornithologique-ninh-binh": {
+  "og": "https://authentikvietnam.com/media/blog/Thung-Nham-Ninh-Binh.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/Thung-Nham-Ninh-Binh.jpg",
+  "checked": "2026-10-22"
+ },
  "https://authentikvietnam.com/tissage-lin-village-lungtam": {
   "og": "https://authentikvietnam.com/media/blog/lung-tam-1.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/lung-tam-1.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/top-8-grottes-ninh-binh-visiter": {
+  "og": "https://authentikvietnam.com/media/blog/grottes-Ninh-Binh%C2%A0.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/grottes-Ninh-Binh%C2%A0.jpg",
+  "checked": "2026-10-22"
  },
  "https://authentikvietnam.com/vieille-ville-hoi-an": {
   "og": "https://authentikvietnam.com/media/blog/visiter-vieille-ville-hoi-an-guide-voyage.jpg",
@@ -398,6 +488,11 @@
   "og": "https://authentikvietnam.com/media/blog/baie-halong-guide-voyage.jpg",
   "thumb": "https://authentikvietnam.com/media/blog/450_230/baie-halong-guide-voyage.jpg",
   "checked": "2026-10-20"
+ },
+ "https://authentikvietnam.com/visiter-ninh-binh-parc-national-cuc-phuong": {
+  "og": "https://authentikvietnam.com/media/blog/parc-cuc-phuong.jpg",
+  "thumb": "https://authentikvietnam.com/media/blog/450_230/parc-cuc-phuong.jpg",
+  "checked": "2026-10-22"
  },
  "https://authentikvietnam.com/voir-riviere-huong-hue": {
   "og": "https://authentikvietnam.com/media/blog/endroit-voir-riviere-Huong-Hue.jpg",
